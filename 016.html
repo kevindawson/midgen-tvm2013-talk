@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Slide 16</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "015z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "017" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>                                      4ROR
+                 _  _
+      _____  ___| || |
+     / _ \ \/ (_) || |_
+    |  __/&gt;  &lt; _|__   _|
+     \___/_/\_(_)  |_|
+
+    $ midgen -f infile
+
+    Running midgen v0.26
+    Stamped -&gt; 2013-08-10T15:55:44Z
+    Package: Anamal
+
+      -------------------------------------------------------
+     | Module                | Version  | Found in           |
+      -------------------------------------------------------
+     | Bar                   | 0.2      | /lib/Anamal.pm     |
+     | Carp::Always::Color   | 0        | /lib/Anamal.pm     |
+     | Compiler::Lexer       | 0        | /lib/Anamal.pm     |
+     | Data::Printer         | 0        | /lib/Anamal.pm     |
+     | Foo                   | 0.123456 | /lib/Anamal.pm     |
+     | Moo                   | 0.999    | /lib/Plugin/Dog.pm |
+     | Moo                   | 0.888    | /lib/Plugin/Cat.pm |
+     | Moo                   | 1.000    | /lib/Anamal.pm     |
+     | Params::Util          | 0        | /lib/Anamal.pm     |
+     | String::RewritePrefix | 0.005    | /lib/Anamal.pm     |
+     | Test::Mock::LWP       | 0        | /t/00.load.t       |
+     | Test::Mock::LWP       | 0        | /t/666-tmw.t       |
+     | Test::More            | 0        | /t/pod.t           |
+     | Test::More            | 0        | /t/pod-coverage.t  |
+     | Test::More            | 0        | /t/00.load.t       |
+     | Test::More            | 0        | /t/666-tmw.t       |
+     | Test::Pod             | 0        | /t/pod.t           |
+     | Test::Pod::Coverage   | 0        | /t/pod-coverage.t  |
+     | Types::Standard       | 0        | /lib/Anamal.pm     |
+     | X                     | 0        | /lib/Anamal.pm     |
+      -------------------------------------------------------
+
+    I just spent 13s doing all that, for you, enjoy
+    __END__
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p>4ROR -> an oxygen atom connected to two alkyl - of general formula R-O-R - (ether)</p><p></p>
+</div>
+</body>
+</html>

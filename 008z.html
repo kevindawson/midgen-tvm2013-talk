@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Slide 8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "009" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>                                 Scope Take Two
+
+    * find requires
+    * find test-requires
+    * don't display this distributions modules
+    * core modules, output format option
+    * menu: GetOpt, midgen --help
+    * options verbose and debug
+    * ignore t::...
+    * padre catch
+
+    * Perl::PrereqScanner
+    * MetaCPAN::API
+    * Perl::MinimumVersion
+    * dual-life modules, output format option
+    * scan whole dist (script, bin, lib, t/)
+    * is this a perl file
+    * information visualization, colour
+    * add various output format options
+    * use a module distributions version if it dose not have one of it's one
+    * .midgenrc
+    * STDOUT and STDERR
+    * time-stamp
+
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Slide 5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "004z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "006" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+<style>
+body {
+  color: white;
+  background-color: black;
+}
+</style>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>
+                 _
+      _____  ___/ |
+     / _ \ \/ (_) |
+    |  __/&gt;  &lt; _| |
+     \___/_/\_(_)_|
+
+
+                              Module::Install::DSL
+
+
+    requires Class::Accessor 0.34
+    requires File::Which     1.09
+    requires Padre           0.98
+    requires PPI             1.215
+    requires PPI::XS         0.902 if can_xs
+    requires Try::Tiny       0.16
+
+    test_requires Test::More      0.98
+    test_requires Test::Requires  0.07
+    test_requires Win32::Process  0.14 if win32
+
+    recommends Test::Pod           1.48
+    recommends Test::Pod::Coverage 1.08
+
+    <font color="green"># The Oslo Consensus was Adam Kennedy's name for an agreement</font>
+    <font color="green"># reached at the 2008 Oslo QA hackathon </font>
+    <font color="green"># by the attending toolchain and QA maintainers.</font>
+
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>

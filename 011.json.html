@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Slide 11</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "010z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "011b.json" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>                                  prerequisite
+
+       &quot;prereqs&quot; : {
+          &quot;runtime&quot; : {
+             &quot;requires&quot; : {
+                ...
+             },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p>The keys are phases of activity, such as runtime, test and develop. Values are Maps in which the keys name the type of prerequisite relationship such as requires, recommends, or suggests and the value provides a set of prerequisite relations. The set of relations must be specified as a Map of package names to version ranges.</p><p></p>
+</div>
+</body>
+</html>
