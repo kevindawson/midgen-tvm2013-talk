@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Slide 9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "008z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "010" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+<style>
+body {
+  color: white;
+  background-color: black;
+}
+</style>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>
+                 ____
+      _____  ___|___ \
+     / _ \ \/ (_) __) |
+    |  __/&gt;  &lt; _ / __/
+     \___/_/\_(_)_____|
+
+    $ midgen -l
+
+    Running midgen v0.26
+    Stamped -&gt; 2013-08-07T21:27:20Z
+    Package: Anamal
+
+    use inc::Module::Install::DSL <font color="orange">1.06</font>;
+
+
+    all_from lib/Anamal.pm
+    requires_from lib/Anamal.pm
+
+    perl_version 5.010000
+
+    requires Bar                   <font color="purple">!mcpan</font>
+    requires Carp                  <font color="yellow">1.26</font>
+    requires Carp::Always::Color   <font color="orange">0.07</font>
+    requires Compiler::Lexer       <font color="orange">0.13</font>
+    requires Data::Printer         <font color="orange">0.35</font>
+    requires Foo                   <font color="cyan">0.02</font>
+    requires List::Util            <font color="yellow">1.3</font>
+    requires Moo                   <font color="orange">1.003</font>
+    requires Params::Util          <font color="orange">1.07</font>
+    requires String::RewritePrefix <font color="orange">0.006</font>
+    requires Types::Standard       <font color="cyan">0.022</font>
+    requires X                     <font color="cyan">1.13</font>
+
+    test_requires Test::Mock::LWP <font color="orange">0.06</font>
+    test_requires Test::More      <font color="cyan">0.98</font>
+
+    recommends Test::Pod           <font color="orange">1.48</font>
+    recommends Test::Pod::Coverage <font color="orange">1.08</font>
+
+    <font color="gray">
+    # ToDo you should consider the following
+    homepage    https://github.com/.../Anamal
+    bugtracker  https://github.com/.../Anamal/issues
+    repository  git://github.com/.../Anamal.git
+    </font>
+
+    install_script ...
+
+    no_index directory qw{ inc t xt }
+
+    I just spent 8s doing all that, for you, enjoy
+    __END__
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>

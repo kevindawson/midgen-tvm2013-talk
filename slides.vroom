@@ -1,0 +1,489 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run 'vroom vroom' to start
+# the show!
+#
+# See 'perldoc Vroom' for complete details.
+#
+---- config
+# Basic config options.
+title: The Musings of a Dyslexic Technologist
+indent: 4
+auto_size: 0
+height: 24
+width: 80
+# vim_opts: '-u NONE'
+skip: 0
+
+#vim: gvim -S ~/.vimrc
+
+# The following options are for Gvim usage.
+#vim: gvim
+#gvimrc: |
+#fuopt: maxhorz,maxvert
+#guioptions: egmLtT
+#guifont: Comic_Sans_MS:h48
+#guicursor: a:blinkon0-ver25-Cursor
+#colorscheme: default
+
+---- shell,i12
+% Title Slide
+    _                   __  __ _     _                  
+   / \   _ __  _ __ _ _|  \/  (_) __| | __ _  ___ _ __  
+  / _ \ | '_ \| '_ (_|_) |\/| | |/ _` |/ _` |/ _ \ '_ \ 
+ / ___ \| |_) | |_) | _| |  | | | (_| | (_| |  __/ | | |
+/_/   \_\ .__/| .__(_|_)_|  |_|_|\__,_|\__, |\___|_| |_|
+        |_|   |_|                      |___/            
+
+
+by bowtie
+
+TVM Sep 2013
+
+http://kevindawson.github.io/midgen-tvm2013-talk/
+
+====
+figlet
+----
+%Me
+== A Dyslexic Technologist
+
+
+* bowtie@cpan.org
+* kevin dawson
+
+* Padre developer and some plug-ins to boot
+* Debug::Client
+
+* deep dark past: Biometrics, Mices and GroupWise
+
+Kevin knows where it will all end up - where 'Kevin' is any random
+entity that doesn't know nothin' about nothin'
+ - D.Adams
+====
+talk about me, ouch!
+----i8
+%TOC
+== Table of Contents
+== or a trilogy in five parts
+
+
+* History, how it all started.
+* Scope, making it up as we go along.
+* IRC, Blogs and Critiques, going public.
+* CPANfile, META.json, need more scanners
+* Giving back or another bloody CPAN module
+====
+TOC
+----
+%History
+== History, how it all started.
+
+* AdamK, Padre::Plugin API 2.2
+ * Wx, Padre::Plugin::Cookbook
++ * Module::Install::DSL (MID)
+  * DSL -> Domain Specific Language
+
++* Azawawi, DSL, you can't Perl-Tidy it ouch!
+
++* Padre feature: edit quick fix (Crtl+2)
+ * PPI::Statement::Include
+
++* CPAN::Shell, for version numbers
+
++* midgen
+ * MID . GENeration
+====
+Adam, dsl, Armed, Padre, CPAN, acronym
+----perl
+%ex:1
+
+              _ 
+   _____  ___/ |
+  / _ \ \/ (_) |
+ |  __/>  < _| |
+  \___/_/\_(_)_|
+
+requires Class::Accessor 0.34
+requires File::Which     1.09
+requires Padre           0.98
+requires PPI             1.215
+requires PPI::XS         0.902 if can_xs
+requires Try::Tiny       0.16
+
+test_requires Test::More      0.98
+test_requires Test::Requires  0.07
+test_requires Win32::Process  0.14 if win32
+
+recommends Test::Pod           1.48
+recommends Test::Pod::Coverage 1.08
+
+# The Oslo Consensus was Adam Kennedy's name for an agreement
+# reached at the 2008 Oslo QA hackathon 
+# by the attending toolchain and QA maintainers.
+
+====
+sample dsl
+----
+== Scope
+
+* find requires
+* find test-requires
+* don't display this distributions modules
+* core modules, output format option
+* menu: GetOpt, midgen --help
+* options verbose and debug
+* ignore t::...
+* padre catch
+
++* ignore all META data ( how old is it! )
+* scan whole dist (lib, t/)
+* display current version string (CPAN)
+* noisy children
+* base parent
+* Mojolicious catch
+* STDOUT
+
+====
+scope take one
+----
+== IRC, Blogs and Critiques, going public.
+
+* CPAN App:: name-space
+ * so I registered it with PAUSE, even
+
++* Blogging about your shinny new thingy
+ * consolidated and updated: http://kevindawson.github.io/bowtie/
+
++* MetaCPAN::API use the Internet
+ * CPAN::Shell user dose not have rights to write
+
++* Perl::PrereqScanner (P-PS)
+ * please don't write another bloody PPI scanner
+ * http://neilb.org/reviews/dependencies.html
+  * Why don't you just think of it as the Perl Parsing Interface for simplicity.
+
++* and a lot of Don't do that
+ * -> will become experimental
+====
+going public
+----
+== Scope Take Two
+
+* find requires
+* find test-requires
+* don't display this distributions modules
+* core modules, output format option
+* menu: GetOpt, midgen --help
+* options verbose and debug
+* ignore t::...
+* padre catch
+
++* Perl::PrereqScanner
+* MetaCPAN::API
+* Perl::MinimumVersion
+* dual-life modules, output format option
+* scan whole dist (script, bin, lib, t/)
+* is this a perl file
+* information visualization, colour
+* add various output format options
+* use a module distributions version if it dose not have one of it's one
+* .midgenrc
+* STDOUT and STDERR
+* time-stamp
+====
+scope take two
+---- i8
+
+#                ____  
+#     _____  ___|___ \ 
+#    / _ \ \/ (_) __) |
+#   |  __/>  < _ / __/ 
+#    \___/_/\_(_)_____|
+
+
+
+$ midgen -l
+
+---- include Anamal.html
+
+----
+== CPANfile, META.json, need more scanners
+
++* CPANfile
+ * Dist::Milla
+  * http://weblog.bulknews.net/post/46471116934/introducing-milla
+
++* CPAN::Meta::Spec v2
+ * https://metacpan.org/module/CPAN::Meta::Spec
+
++* META.json
+====
+meta v2
+---- json
+== prerequisite
+
+   "prereqs" : {
+      "runtime" : {
+         "requires" : {
+            ...
+         },
++         "suggests" : {...},
+         "recommends" : {...},
+      },
++      "test" : {
+         "requires" : {
+            ...
+         },
+         "suggests" : {
+            ...
+         }
+      },
++      "develop" : {
+         "requires" : {
+            ...
+         }
+      }
+   }
+
+====
+The keys are phases of activity, such as runtime, test and develop. Values are Maps in which the keys name the type of prerequisite relationship such as requires, recommends, or suggests and the value provides a set of prerequisite relations. The set of relations must be specified as a Map of package names to version ranges.
+
+----
+== flow chart
+== show me the money
+---- include flow.txt
+
+====
+---- perl
+
+#App-Midgen/t/11-can_xs_1.t
+use Test::More;
+use Test::Requires {'PPI::XS' => 0.902};
+ok($PPI::XS::VERSION == 0.902, 'PPI::XS is loaded');
+
+#Anamal/t/pod.t
+eval "use Test::Pod 1.14";
+plan skip_all => "Test::Pod 1.14 required for testing POD" if $@;
+
+
+====
+use can_xs instead of can_cc ribasushi++
+
+requires PPI::XS 0.902 if can_xs
+
+---- i4
+             _____ 
+  _____  ___|___ / 
+ / _ \ \/ (_) |_ \ 
+|  __/>  < _ ___) |
+ \___/_/\_(_)____/ 
+                   
+
+Running midgen v0.26
+Stamped -> 2013-08-13T18:42:34Z
+Package: Anamal
+{
+[90m   "abstract" : "This is a short description of the purpose of the distribution.",
+   "author" : "...",
+   "dynamic_config" : "0|1",
+   "generated_by" : "...",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+[0m   "name" : "Anamal",
+[90m   "release_status" : "stable|testing|unstable",
+   "version" : "...",
+[0m   "prereqs" : {
+      "runtime" : {
+         "requires" : {
+            "Carp" : "[93m1.26[0m",
+            "Carp::Always::Color" : "[33m0.07[0m",
+            "Compiler::Lexer" : "[33m0.13[0m",
+            "Data::Printer" : "[33m0.35[0m",
+            "Foo" : "[96m0.02[0m",
+            "List::Util" : "[93m1.3[0m",
+            "Moo" : "[33m1.003[0m",
+            "Params::Util" : "[33m1.07[0m",
+            "String::RewritePrefix" : "[33m0.006[0m",
+            "Types::Standard" : "[96m0.022[0m",
+            "X" : "[96m1.13[0m",
+            "perl" : "5.010000",
+         }[90m,
+         "suggests" : {...},
+         "recommends" : {...},[0m
+      },
+      "test" : {
+         "requires" : {
+            "Test::Mock::LWP" : "[33m0.06[0m",
+            "Test::More" : "[96m0.98[0m",
+         },
+         "suggests" : {
+            "Test::Pod" : "[33m1.48[0m",
+            "Test::Pod::Coverage" : "[33m1.08[0m",
+         }
+      }
+   }
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "t",
+         "xt",
+      ]
+   },
+[90m   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/.../Anamal/issues"
+      },
+      "homepage" : "https://github.com/.../Anamal",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/.../Anamal.git",
+         "web" : "https://github.com/.../Anamal"
+      }
+   },
+   "x_contributors" : [
+      "brian d foy (ADOPTME) <brian.d.foy@gmail.com>",
+      "Fred Bloggs <fred@bloggs.org>"
+   ]
+[0m}
+
+I just spent 8s doing all that, for you, enjoy
+__END__
+
+
+----
+== Giving back or another bloody CPAN module
+
++* Perl::PrereqScanner (P-PS)
+ * https://github.com/rjbs/perl-prereqscanner
+
++* don't be intermediated by the Authors Reputation
+ * make your own impression
+
++* talk to the Author
+ * via e-mail
+ * IRC
+
++* review the dists RT's
+ * supply patches and enhancements
+
++* be patient, your in the Open Source World now
+
++* Pumpkin => RJBS
+ * a very, very busy person, working for us
+ * https://github.com/rjbs/misc/blob/master/code-review.mkdn
+
+----
+== 4ROR
+             _  _   
+  _____  ___| || |  
+ / _ \ \/ (_) || |_ 
+|  __/>  < _|__   _|
+ \___/_/\_(_)  |_|  
+
+$ midgen -f infile
+
+Running midgen v0.26
+Stamped -> 2013-08-10T15:55:44Z
+Package: Anamal
+
+  -------------------------------------------------------
+ | Module                | Version  | Found in           |
+  -------------------------------------------------------
+ | Bar                   | 0.2      | /lib/Anamal.pm     |
+ | Carp::Always::Color   | 0        | /lib/Anamal.pm     |
+ | Compiler::Lexer       | 0        | /lib/Anamal.pm     |
+ | Data::Printer         | 0        | /lib/Anamal.pm     |
+ | Foo                   | 0.123456 | /lib/Anamal.pm     |
+ | Moo                   | 0.999    | /lib/Plugin/Dog.pm |
+ | Moo                   | 0.888    | /lib/Plugin/Cat.pm |
+ | Moo                   | 1.000    | /lib/Anamal.pm     |
+ | Params::Util          | 0        | /lib/Anamal.pm     |
+ | String::RewritePrefix | 0.005    | /lib/Anamal.pm     |
+ | Test::Mock::LWP       | 0        | /t/00.load.t       |
+ | Test::Mock::LWP       | 0        | /t/666-tmw.t       |
+ | Test::More            | 0        | /t/pod.t           |
+ | Test::More            | 0        | /t/pod-coverage.t  |
+ | Test::More            | 0        | /t/00.load.t       |
+ | Test::More            | 0        | /t/666-tmw.t       |
+ | Test::Pod             | 0        | /t/pod.t           |
+ | Test::Pod::Coverage   | 0        | /t/pod-coverage.t  |
+ | Types::Standard       | 0        | /lib/Anamal.pm     |
+ | X                     | 0        | /lib/Anamal.pm     |
+  -------------------------------------------------------
+
+I just spent 13s doing all that, for you, enjoy
+__END__
+====
+4ROR -> an oxygen atom connected to two alkyl - of general formula R-O-R - (ether)
+----
+== putting it all together
+
+          +---------+
+          |  cpan   |
+          +----+----+
+               |
+          +----v---------------+
+          | META.{json,yml}    |
+          |--------------------|
+          | configure_requires |
+          +--------+-----------+
+                   |
+          +--------v------+
+          |    if         |
+          |---------------|
+          |dynamic_config |0   +---------------+
+          |               +----> install       |
+          +---------+-----+    | build prereqs |
+                    |1         |               |
+                    |          +--+------------+
+                    |             |
+                 +--v-------------v---+
+                 |   run              |
+                 |--------------------|
+                 |{Makefile,Build}.PL |
+                 +---------+----------+
+                           |
+                 +---------v----------+
+                 |    read            |
+                 |--------------------|
+                 |MYMETA.{json,yml}   |
+                 +---------+----------+
+                           |
+                 +---------v----------+
+                 | read prereq        |
+                 |--------------------|
+                 | install            |
+                 +--------------------+
+====
+this might be one slide two far
+---- shell,i8
+%Questions
+  ___                  _   _                 
+ / _ \ _   _  ___  ___| |_(_) ___  _ __  ___ 
+| | | | | | |/ _ \/ __| __| |/ _ \| '_ \/ __|
+| |_| | |_| |  __/\__ \ |_| | (_) | | | \__ \
+ \__\_\\__,_|\___||___/\__|_|\___/|_| |_|___/
+
+                                             
+brought to you by the letter A:
+
+* http://ingydotnet.github.com/vroom-pm/
+* http://www.figlet.org/
+* http://www.asciiflow.com/#Draw
+====
+questions
+---- shell,i18
+%End
+ _____ _            _____           _ 
+|_   _| |__   ___  | ____|_ __   __| |
+  | | | '_ \ / _ \ |  _| | '_ \ / _` |
+  | | | | | |  __/ | |___| | | | (_| |
+  |_| |_| |_|\___| |_____|_| |_|\__,_|
+
+

@@ -1,0 +1,140 @@
+
+           -- Title Slide --
+
+figlet
+
+
+<Space>    -- Me --
+
+talk about me, ouch!
+
+
+<Space>    -- TOC --
+
+TOC
+
+
+<Space>    -- History --
+
+Adam, dsl, Armed, Padre, CPAN, acronym
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+
+<Space>    -- ex:1 --
+
+sample dsl
+
+
+<Space>    -- Slide 6 --
+
+scope take one
+
+<Space>
+
+
+<Space>    -- Slide 7 --
+
+going public
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+
+<Space>    -- Slide 8 --
+
+scope take two
+
+<Space>
+
+
+<Space>    -- Slide 9 --
+
+
+
+<Space>    -- Slide 10 --
+
+meta v2
+
+<Space>
+
+<Space>
+
+<Space>
+
+
+<Space>    -- Slide 11 --
+
+The keys are phases of activity, such as runtime, test and develop. Values are Maps in which the keys name the type of prerequisite relationship such as requires, recommends, or suggests and the value provides a set of prerequisite relations. The set of relations must be specified as a Map of package names to version ranges.
+
+
+<Space>
+
+<Space>
+
+<Space>
+
+
+<Space>    -- Slide 12 --
+
+
+
+<Space>    -- Slide 13 --
+
+use can_xs instead of can_cc ribasushi++
+
+requires PPI::XS 0.902 if can_xs
+
+
+
+<Space>    -- Slide 14 --
+
+
+
+<Space>    -- Slide 15 --
+
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+<Space>
+
+
+<Space>    -- Slide 16 --
+
+4ROR -> an oxygen atom connected to two alkyl - of general formula R-O-R - (ether)
+
+
+<Space>    -- Slide 17 --
+
+this might be one slide two far
+
+
+<Space>    -- Questions --
+
+questions
+
+
+<Space>    -- End --
+
+

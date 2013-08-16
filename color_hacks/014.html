@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Slide 14</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "013.pl" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "015" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+<style>
+body {
+  color: white;
+  background-color: black;
+}
+</style>
+</head>
+<body onkeydown="return navigate(event)">
+<div style="border-style: solid ; border-width: 2px ; font-size: x-large">
+<pre>                 _____
+      _____  ___|___ /
+     / _ \ \/ (_) |_ \
+    |  __/&gt;  &lt; _ ___) |
+     \___/_/\_(_)____/
+
+
+    $ midgen -lf metajson
+
+    Running midgen v0.26
+    Stamped -&gt; 2013-08-13T18:42:34Z
+    Package: Anamal
+    {
+    <font color="gray">   &quot;abstract&quot; : &quot;This is a short description of the purpose of the distribution.&quot;,
+       &quot;author&quot; : &quot;...&quot;,
+       &quot;dynamic_config&quot; : &quot;0|1&quot;,
+       &quot;generated_by&quot; : &quot;...&quot;,
+       &quot;license&quot; : [
+          &quot;perl_5&quot;
+       ],
+       &quot;meta-spec&quot; : {
+          &quot;url&quot; : &quot;http://search.cpan.org/perldoc?CPAN::Meta::Spec&quot;,
+          &quot;version&quot; : &quot;2&quot;
+       },
+    </font>   &quot;name&quot; : &quot;Anamal&quot;,
+    <font color="gray">   &quot;release_status&quot; : &quot;stable|testing|unstable&quot;,
+       &quot;version&quot; : &quot;...&quot;,
+    </font>   &quot;prereqs&quot; : {
+          &quot;runtime&quot; : {
+             &quot;requires&quot; : {
+                &quot;Carp&quot; : &quot;<font color="yellow">1.26</font>&quot;,
+                &quot;Carp::Always::Color&quot; : &quot;<font color="orange">0.07</font>&quot;,
+                &quot;Compiler::Lexer&quot; : &quot;<font color="orange">0.13</font>&quot;,
+                &quot;Data::Printer&quot; : &quot;<font color="orange">0.35</font>&quot;,
+                &quot;Foo&quot; : &quot;<font color="cyan">0.02</font>&quot;,
+                &quot;List::Util&quot; : &quot;<font color="yellow">1.3</font>&quot;,
+                &quot;Moo&quot; : &quot;<font color="orange">1.003</font>&quot;,
+                &quot;Params::Util&quot; : &quot;<font color="orange">1.07</font>&quot;,
+                &quot;String::RewritePrefix&quot; : &quot;<font color="orange">0.006</font>&quot;,
+                &quot;Types::Standard&quot; : &quot;<font color="cyan">0.022</font>&quot;,
+                &quot;X&quot; : &quot;<font color="cyan">1.13</font>&quot;,
+                &quot;perl&quot; : &quot;5.010000&quot;,
+             }<font color="gray">,
+             &quot;suggests&quot; : {...},
+             &quot;recommends&quot; : {...},</font>
+          },
+          &quot;test&quot; : {
+             &quot;requires&quot; : {
+                &quot;Test::Mock::LWP&quot; : &quot;<font color="orange">0.06</font>&quot;,
+                &quot;Test::More&quot; : &quot;<font color="cyan">0.98</font>&quot;,
+             },
+             &quot;suggests&quot; : {
+                &quot;Test::Pod&quot; : &quot;<font color="orange">1.48</font>&quot;,
+                &quot;Test::Pod::Coverage&quot; : &quot;<font color="orange">1.08</font>&quot;,
+             }
+          }
+       }
+       &quot;no_index&quot; : {
+          &quot;directory&quot; : [
+             &quot;inc&quot;,
+             &quot;t&quot;,
+             &quot;xt&quot;,
+          ]
+       },
+    <font color="gray">  &quot;resources&quot; : {
+          &quot;bugtracker&quot; : {
+             &quot;web&quot; : &quot;https://github.com/.../Anamal/issues&quot;
+          },
+          &quot;homepage&quot; : &quot;https://github.com/.../Anamal&quot;,
+          &quot;repository&quot; : {
+             &quot;type&quot; : &quot;git&quot;,
+             &quot;url&quot; : &quot;https://github.com/.../Anamal.git&quot;,
+             &quot;web&quot; : &quot;https://github.com/.../Anamal&quot;
+          }
+       },
+       &quot;x_contributors&quot; : [
+          &quot;brian d foy (ADOPTME) &lt;brian.d.foy@gmail.com&gt;&quot;,
+          &quot;Fred Bloggs &lt;fred@bloggs.org&gt;&quot;
+       ]
+    </font>}
+
+    I just spent 8s doing all that, for you, enjoy
+    __END__
+</pre>
+</div>
+<br>
+<div style="font-size: small">
+<p></p>
+</div>
+</body>
+</html>
